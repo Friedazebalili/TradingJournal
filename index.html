@@ -16,8 +16,8 @@
     :root {
       --bg: #02040a;
       --black: #010205;
-      --panel: rgba(255, 255, 255, 0.035);
-      --panel-strong: rgba(255, 255, 255, 0.06);
+      --panel: rgba(255, 255, 255, 0.04);
+      --panel-strong: rgba(255, 255, 255, 0.07);
       --border: rgba(255, 255, 255, 0.08);
       --border-strong: rgba(34, 211, 238, 0.35);
       --text: #ffffff;
@@ -30,9 +30,8 @@
       --red: #fb7185;
       --red-dark: #dc2626;
       --yellow: #facc15;
-      --shadow-cyan: 0 0 30px rgba(34, 211, 238, 0.12);
-      --shadow-card: 0 22px 70px rgba(0, 0, 0, 0.35);
-      --radius: 22px;
+      --shadow-card: 0 16px 45px rgba(0, 0, 0, 0.35);
+      --radius: 16px;
     }
 
     * {
@@ -48,10 +47,6 @@
       color: var(--text);
       overflow-x: hidden;
       cursor: none !important;
-    }
-
-    body {
-      selection-background: var(--cyan);
     }
 
     h1,
@@ -91,10 +86,10 @@
       position: absolute;
       inset: -20%;
       background:
-        radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.16) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.14) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.08) 0%, transparent 60%);
-      filter: blur(100px);
+        radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.14) 0%, transparent 46%),
+        radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.12) 0%, transparent 48%),
+        radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.07) 0%, transparent 56%);
+      filter: blur(90px);
       animation: nebulaPulse 15s ease-in-out infinite alternate;
     }
 
@@ -109,7 +104,7 @@
         radial-gradient(2px 2px at 20% 80%, #ffffff, transparent),
         radial-gradient(1.5px 1.5px at 90% 90%, #22d3ee, transparent);
       background-size: 400px 400px;
-      opacity: 0.45;
+      opacity: 0.32;
       animation: starsTwinkle 8s ease-in-out infinite alternate;
     }
 
@@ -119,23 +114,22 @@
       z-index: -2;
       pointer-events: none;
       background-image:
-        linear-gradient(to right, rgba(34, 211, 238, 0.055) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(34, 211, 238, 0.055) 1px, transparent 1px);
-      background-size: 100px 100px;
+        linear-gradient(to right, rgba(34, 211, 238, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 211, 238, 0.045) 1px, transparent 1px);
+      background-size: 80px 80px;
       mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
       -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
-      filter: blur(0.5px);
     }
 
     .top-glow {
       position: fixed;
-      top: -120px;
+      top: -160px;
       left: 50%;
-      width: 100%;
-      height: 55vh;
+      width: 90%;
+      height: 45vh;
       transform: translateX(-50%);
       background: rgba(8, 145, 178, 0.12);
-      filter: blur(120px);
+      filter: blur(110px);
       border-radius: 999px;
       z-index: -1;
       pointer-events: none;
@@ -144,41 +138,29 @@
     @keyframes nebulaPulse {
       0% {
         transform: scale(1);
-        opacity: 0.82;
+        opacity: 0.8;
       }
 
       100% {
-        transform: scale(1.1);
+        transform: scale(1.08);
         opacity: 1;
       }
     }
 
     @keyframes starsTwinkle {
       0% {
-        opacity: 0.3;
+        opacity: 0.22;
         transform: translateY(0);
       }
 
       100% {
-        opacity: 0.6;
-        transform: translateY(-20px);
+        opacity: 0.46;
+        transform: translateY(-18px);
       }
-    }
-
-    .neon-blue {
-      text-shadow:
-        0 0 10px rgba(6, 182, 212, 0.55),
-        0 0 30px rgba(6, 182, 212, 0.22);
     }
 
     .text-gradient {
       background: linear-gradient(to right, #22d3ee, #3b82f6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .text-gradient-green {
-      background: linear-gradient(to right, #4ade80, #16a34a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -192,21 +174,21 @@
 
     .glow-hover {
       transition:
-        box-shadow 0.35s ease,
-        border-color 0.35s ease,
-        transform 0.35s ease,
-        background 0.35s ease;
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
     }
 
     .glow-hover:hover {
-      border-color: rgba(34, 211, 238, 0.38);
-      box-shadow: 0 0 24px rgba(6, 182, 212, 0.14);
-      transform: translateY(-2px);
+      border-color: rgba(34, 211, 238, 0.34);
+      box-shadow: 0 0 22px rgba(6, 182, 212, 0.12);
+      transform: translateY(-1px);
     }
 
     #neon-cursor {
-      width: 25px;
-      height: 25px;
+      width: 24px;
+      height: 24px;
       border: 1.5px solid #22d3ee;
       box-shadow: 0 0 15px rgba(34, 211, 238, 0.42);
       border-radius: 50%;
@@ -260,46 +242,47 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      background: rgba(0, 0, 0, 0.62);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(0, 0, 0, 0.64);
       backdrop-filter: blur(18px);
     }
 
     .nav-inner {
-      max-width: 1280px;
+      max-width: 1500px;
       margin: 0 auto;
-      padding: 18px 24px;
+      padding: 10px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-family: "Syne", sans-serif;
       font-weight: 800;
       color: #ffffff;
       letter-spacing: -0.04em;
-      font-size: 20px;
+      font-size: 18px;
+      white-space: nowrap;
     }
 
     .brand-icon {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       border-radius: 999px;
       display: grid;
       place-items: center;
       border: 1px solid rgba(34, 211, 238, 0.35);
       background: rgba(34, 211, 238, 0.08);
-      box-shadow: 0 0 20px rgba(34, 211, 238, 0.13);
+      box-shadow: 0 0 18px rgba(34, 211, 238, 0.13);
     }
 
     .brand-icon svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       color: var(--cyan);
     }
 
@@ -307,69 +290,38 @@
       color: var(--cyan);
     }
 
-    .nav-actions {
+    .header-mini {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .nav-pill {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.04);
-      color: #ffffff;
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-size: 12px;
-      font-weight: 700;
-      transition: 0.25s ease;
-    }
-
-    .nav-pill:hover {
-      background: var(--cyan);
-      border-color: var(--cyan);
-      color: #02040a;
-    }
-
-    .page {
-      position: relative;
-      z-index: 1;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 58px 24px 80px;
-    }
-
-    .hero {
-      min-height: 360px;
-      display: grid;
-      align-items: center;
-      justify-items: center;
-      text-align: center;
-      padding: 38px 0 50px;
-    }
-
-    .status-pill {
+    .mini-badge {
       display: inline-flex;
       align-items: center;
-      gap: 9px;
-      padding: 8px 14px;
+      gap: 7px;
+      min-height: 32px;
+      padding: 0 11px;
       border-radius: 999px;
       border: 1px solid rgba(74, 222, 128, 0.22);
       background: rgba(74, 222, 128, 0.06);
       color: var(--green);
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 11px;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      margin-bottom: 28px;
+      white-space: nowrap;
     }
 
     .status-dot {
       position: relative;
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
       background: var(--green);
-      box-shadow: 0 0 14px rgba(74, 222, 128, 0.7);
+      box-shadow: 0 0 12px rgba(74, 222, 128, 0.7);
     }
 
     .status-dot::before {
@@ -384,67 +336,111 @@
     @keyframes ping {
       75%,
       100% {
-        transform: scale(2.5);
+        transform: scale(2.4);
         opacity: 0;
       }
     }
 
-    .hero h1 {
+    .nav-pill {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-size: 11px;
+      font-weight: 800;
+      transition: 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .nav-pill:hover {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: #02040a;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 14px 16px 18px;
+    }
+
+    .top-dashboard {
+      display: grid;
+      grid-template-columns: 0.85fr 1.2fr 1fr;
+      gap: 12px;
+      align-items: stretch;
+      margin-bottom: 12px;
+    }
+
+    .hero-compact {
+      border-radius: var(--radius);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 210px;
+    }
+
+    .hero-compact h1 {
       margin: 0;
-      font-size: clamp(52px, 11vw, 120px);
-      line-height: 0.88;
-      letter-spacing: -0.085em;
+      font-size: clamp(32px, 4vw, 58px);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
       color: #ffffff;
       font-weight: 800;
     }
 
-    .hero h1 span {
-      display: inline-block;
-    }
-
-    .hero p {
-      max-width: 720px;
-      margin: 24px auto 0;
+    .hero-compact p {
+      margin: 10px 0 0;
       color: var(--muted);
-      font-size: clamp(15px, 2vw, 18px);
-      line-height: 1.8;
-      font-weight: 300;
+      font-size: 12px;
+      line-height: 1.55;
+      max-width: 440px;
     }
 
     .month-bar {
-      width: 100%;
-      max-width: 860px;
-      margin: 36px auto 0;
       display: grid;
       grid-template-columns: auto 1fr auto;
       align-items: center;
-      gap: 10px;
-      padding: 10px;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 7px;
+      border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(0, 0, 0, 0.24);
-      backdrop-filter: blur(12px);
     }
 
     .month-title {
       font-family: "Syne", sans-serif;
-      font-size: clamp(18px, 3vw, 30px);
+      font-size: 17px;
       font-weight: 800;
       color: #ffffff;
       text-align: center;
       letter-spacing: -0.04em;
+      line-height: 1;
     }
 
     .btn {
       border: 0;
-      min-height: 48px;
-      padding: 0 18px;
+      min-height: 34px;
+      padding: 0 12px;
       font-weight: 800;
-      font-size: 13px;
+      font-size: 11px;
       transition: 0.25s ease;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
+      gap: 7px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    .btn svg {
+      width: 14px;
+      height: 14px;
     }
 
     .btn-primary {
@@ -481,41 +477,255 @@
       border-color: var(--red-dark);
     }
 
+    .panel {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      padding: 12px 13px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cyan);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: var(--cyan);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+    }
+
+    .panel h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+    }
+
+    .panel p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .notes-area {
+      padding: 10px;
+    }
+
+    .note-box {
+      width: 100%;
+      min-height: 112px;
+      max-height: 112px;
+      resize: none;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.26);
+      color: #e2e8f0;
+      border-radius: 12px;
+      padding: 11px;
+      font-size: 12px;
+      line-height: 1.55;
+      outline: none;
+      transition: 0.25s ease;
+    }
+
+    .note-box::placeholder,
+    .strategy-input input::placeholder,
+    .modal-field input::placeholder,
+    .modal-field textarea::placeholder {
+      color: rgba(148, 163, 184, 0.62);
+    }
+
+    .note-box:focus,
+    .strategy-input input:focus,
+    .modal-field input:focus,
+    .modal-field textarea:focus {
+      border-color: rgba(34, 211, 238, 0.52);
+      box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.08);
+    }
+
+    .panel-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .strategy-area {
+      padding: 10px;
+    }
+
+    .strategy-input {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 9px;
+    }
+
+    .strategy-input input {
+      flex: 1;
+      min-height: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.26);
+      color: #e2e8f0;
+      border-radius: 10px;
+      padding: 0 10px;
+      outline: none;
+      font-size: 12px;
+    }
+
+    .strategy-list {
+      display: grid;
+      gap: 7px;
+      max-height: 150px;
+      overflow: auto;
+      padding-right: 3px;
+    }
+
+    .strategy-list::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .strategy-list::-webkit-scrollbar-thumb {
+      background: rgba(34, 211, 238, 0.28);
+      border-radius: 999px;
+    }
+
+    .strategy-item {
+      border: 1px solid rgba(255, 255, 255, 0.065);
+      background: rgba(255, 255, 255, 0.025);
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.25s ease;
+      border-radius: 11px;
+    }
+
+    .strategy-item:hover {
+      border-color: rgba(34, 211, 238, 0.28);
+      background: rgba(34, 211, 238, 0.04);
+    }
+
+    .strategy-item input {
+      width: 15px;
+      height: 15px;
+      accent-color: var(--cyan);
+      flex: 0 0 auto;
+    }
+
+    .strategy-text {
+      flex: 1;
+      color: #dbeafe;
+      font-weight: 650;
+      font-size: 11px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    .strategy-item.done .strategy-text {
+      color: rgba(148, 163, 184, 0.72);
+      text-decoration: line-through;
+    }
+
+    .delete-strategy {
+      width: 25px;
+      height: 25px;
+      border: 1px solid rgba(251, 113, 133, 0.24);
+      background: rgba(251, 113, 133, 0.08);
+      color: var(--red);
+      font-size: 16px;
+      font-weight: 900;
+      flex: 0 0 auto;
+      transition: 0.2s ease;
+      border-radius: 8px;
+    }
+
+    .delete-strategy:hover {
+      background: rgba(251, 113, 133, 0.18);
+    }
+
+    .empty-state {
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.18);
+      color: var(--muted);
+      text-align: center;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .chart-strategy-area {
+      height: 152px;
+      padding: 10px;
+    }
+
+    .chart-box {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.055);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.06), transparent 28%),
+        rgba(0, 0, 0, 0.18);
+      overflow: hidden;
+      padding: 6px;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      background: rgba(0, 0, 0, 0.22);
-      backdrop-filter: blur(12px);
-      margin-bottom: 28px;
+      gap: 9px;
+      margin-bottom: 12px;
     }
 
     .stat {
-      padding: 25px 20px;
+      padding: 10px;
       text-align: center;
-      border-right: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .stat:last-child {
-      border-right: 0;
+      border-radius: 14px;
+      min-height: 74px;
     }
 
     .stat strong {
       display: block;
       font-family: "Syne", sans-serif;
       color: #ffffff;
-      font-size: clamp(24px, 3vw, 34px);
+      font-size: 24px;
       line-height: 1;
-      margin-bottom: 9px;
+      margin-bottom: 7px;
+      letter-spacing: -0.04em;
     }
 
     .stat span {
       color: var(--muted-dark);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 11px;
-      font-weight: 800;
+      letter-spacing: 0.11em;
+      font-size: 9px;
+      font-weight: 900;
     }
 
     .stat.green strong {
@@ -526,65 +736,37 @@
       color: var(--red);
     }
 
-    .journal-layout {
+    .bottom-dashboard {
       display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.75fr);
-      gap: 24px;
-      align-items: start;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.65fr);
+      gap: 12px;
+      align-items: stretch;
     }
 
-    .panel {
-      border-radius: var(--radius);
-      overflow: hidden;
+    .calendar-panel {
+      min-height: 465px;
     }
 
-    .panel + .panel {
-      margin-top: 24px;
-    }
-
-    .panel-head {
-      padding: 24px 24px 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+    .calendar-head-tools {
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .eyebrow {
+    .pro-tip {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      color: var(--cyan);
-      font-size: 12px;
+      gap: 6px;
+      padding: 7px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 211, 238, 0.16);
+      background: rgba(34, 211, 238, 0.055);
+      color: #bff8ff;
+      font-size: 10px;
       font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 11px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 34px;
-      height: 1px;
-      background: var(--cyan);
-      box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
-    }
-
-    .panel h2 {
-      margin: 0;
-      color: #ffffff;
-      font-size: clamp(25px, 3vw, 42px);
-      line-height: 1;
-      letter-spacing: -0.06em;
-      font-weight: 800;
-    }
-
-    .panel p {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
+      white-space: nowrap;
     }
 
     .calendar {
@@ -599,11 +781,11 @@
     }
 
     .weekdays div {
-      padding: 14px 8px;
+      padding: 9px 6px;
       text-align: center;
       color: rgba(148, 163, 184, 0.92);
-      font-size: 11px;
-      font-weight: 800;
+      font-size: 9px;
+      font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
@@ -614,8 +796,8 @@
     }
 
     .day {
-      min-height: 120px;
-      padding: 12px;
+      min-height: 66px;
+      padding: 7px;
       border: 0;
       border-right: 1px solid rgba(255, 255, 255, 0.055);
       border-bottom: 1px solid rgba(255, 255, 255, 0.055);
@@ -624,7 +806,7 @@
       text-align: left;
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 5px;
       position: relative;
       transition: 0.25s ease;
     }
@@ -644,30 +826,30 @@
     }
 
     .day-number {
-      width: 32px;
-      height: 32px;
+      width: 23px;
+      height: 23px;
       display: grid;
       place-items: center;
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(255, 255, 255, 0.04);
       color: #e2e8f0;
-      font-size: 13px;
-      font-weight: 800;
+      font-size: 10px;
+      font-weight: 900;
     }
 
     .day.today .day-number {
       color: #02040a;
       background: var(--cyan);
       border-color: var(--cyan);
-      box-shadow: 0 0 22px rgba(34, 211, 238, 0.4);
+      box-shadow: 0 0 18px rgba(34, 211, 238, 0.4);
     }
 
     .day-value {
       margin-top: auto;
-      border-radius: 12px;
-      padding: 9px 8px;
-      font-size: 13px;
+      border-radius: 9px;
+      padding: 6px 5px;
+      font-size: 10px;
       line-height: 1;
       font-weight: 900;
       text-align: center;
@@ -697,166 +879,70 @@
 
     .note-dot {
       position: absolute;
-      top: 14px;
-      right: 14px;
-      width: 7px;
-      height: 7px;
+      top: 9px;
+      right: 9px;
+      width: 6px;
+      height: 6px;
       border-radius: 999px;
       background: var(--cyan);
-      box-shadow: 0 0 14px rgba(34, 211, 238, 0.75);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.75);
+    }
+
+    .performance-panel {
+      min-height: 465px;
     }
 
     .chart-area {
-      height: 350px;
-      padding: 18px;
+      height: 378px;
+      padding: 10px;
     }
 
-    .chart-box {
-      width: 100%;
-      height: 100%;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.055);
-      background:
-        radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.06), transparent 28%),
-        rgba(0, 0, 0, 0.18);
-      overflow: hidden;
-      padding: 8px;
-    }
-
-    canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .notes-area {
-      padding: 18px;
-    }
-
-    .note-box {
-      width: 100%;
-      min-height: 235px;
-      resize: vertical;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(0, 0, 0, 0.26);
-      color: #e2e8f0;
-      border-radius: 18px;
-      padding: 16px;
-      font-size: 14px;
-      line-height: 1.8;
-      outline: none;
-      transition: 0.25s ease;
-    }
-
-    .note-box::placeholder,
-    .strategy-input input::placeholder,
-    .modal-field input::placeholder,
-    .modal-field textarea::placeholder {
-      color: rgba(148, 163, 184, 0.62);
-    }
-
-    .note-box:focus,
-    .strategy-input input:focus,
-    .modal-field input:focus,
-    .modal-field textarea:focus {
-      border-color: rgba(34, 211, 238, 0.52);
-      box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.08);
-    }
-
-    .panel-actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .strategy-area {
-      padding: 18px;
-    }
-
-    .strategy-input {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .strategy-input input {
-      flex: 1;
-      min-height: 48px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(0, 0, 0, 0.26);
-      color: #e2e8f0;
-      border-radius: 0;
-      padding: 0 14px;
-      outline: none;
-      font-size: 14px;
-    }
-
-    .strategy-list {
+    .legend-stack {
       display: grid;
-      gap: 10px;
+      gap: 8px;
+      padding: 0 10px 10px;
     }
 
-    .strategy-item {
+    .legend-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
       border: 1px solid rgba(255, 255, 255, 0.065);
       background: rgba(255, 255, 255, 0.025);
-      padding: 13px;
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      transition: 0.25s ease;
+      padding: 8px;
+      border-radius: 12px;
     }
 
-    .strategy-item:hover {
-      border-color: rgba(34, 211, 238, 0.28);
-      background: rgba(34, 211, 238, 0.04);
-    }
-
-    .strategy-item input {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--cyan);
+    .legend-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
       flex: 0 0 auto;
+      background: rgba(34, 211, 238, 0.08);
+      border: 1px solid rgba(34, 211, 238, 0.18);
+      color: var(--cyan);
     }
 
-    .strategy-text {
-      flex: 1;
-      color: #dbeafe;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 1.5;
-      word-break: break-word;
+    .legend-icon svg {
+      width: 13px;
+      height: 13px;
     }
 
-    .strategy-item.done .strategy-text {
-      color: rgba(148, 163, 184, 0.72);
-      text-decoration: line-through;
+    .legend-item strong {
+      display: block;
+      color: #ffffff;
+      font-size: 11px;
+      line-height: 1.2;
+      margin-bottom: 3px;
     }
 
-    .delete-strategy {
-      width: 34px;
-      height: 34px;
-      border: 1px solid rgba(251, 113, 133, 0.24);
-      background: rgba(251, 113, 133, 0.08);
-      color: var(--red);
-      font-size: 18px;
-      font-weight: 900;
-      flex: 0 0 auto;
-      transition: 0.2s ease;
-    }
-
-    .delete-strategy:hover {
-      background: rgba(251, 113, 133, 0.18);
-    }
-
-    .empty-state {
-      border: 1px dashed rgba(255, 255, 255, 0.1);
-      background: rgba(0, 0, 0, 0.18);
+    .legend-item span {
+      display: block;
       color: var(--muted);
-      text-align: center;
-      padding: 20px;
-      border-radius: 16px;
-      font-size: 14px;
+      font-size: 10px;
+      line-height: 1.4;
     }
 
     .modal-overlay {
@@ -877,48 +963,48 @@
 
     .modal {
       width: 100%;
-      max-width: 510px;
+      max-width: 470px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background:
         radial-gradient(circle at 20% 0%, rgba(34, 211, 238, 0.12), transparent 34%),
         rgba(2, 6, 23, 0.94);
       backdrop-filter: blur(20px);
       box-shadow: 0 32px 90px rgba(0, 0, 0, 0.62);
-      border-radius: 24px;
-      padding: 24px;
+      border-radius: 20px;
+      padding: 20px;
     }
 
     .modal-top {
-      padding-bottom: 18px;
+      padding-bottom: 14px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     .modal-top h3 {
       margin: 0;
       color: #ffffff;
-      font-size: 28px;
+      font-size: 24px;
       line-height: 1;
       letter-spacing: -0.06em;
     }
 
     .modal-top p {
-      margin: 10px 0 0;
+      margin: 8px 0 0;
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
+      font-size: 12px;
+      line-height: 1.55;
     }
 
     .modal-field {
       display: grid;
-      gap: 8px;
-      margin-bottom: 14px;
+      gap: 7px;
+      margin-bottom: 12px;
     }
 
     .modal-field label {
       color: #e2e8f0;
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 11px;
+      font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
@@ -929,61 +1015,62 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(0, 0, 0, 0.28);
       color: #e2e8f0;
-      border-radius: 14px;
-      padding: 13px 14px;
+      border-radius: 12px;
+      padding: 12px;
       outline: none;
-      font-size: 15px;
+      font-size: 13px;
     }
 
     .modal-field textarea {
-      min-height: 115px;
+      min-height: 92px;
       resize: vertical;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .help-text {
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
-      padding: 12px;
+      font-size: 11px;
+      line-height: 1.5;
+      padding: 10px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       background: rgba(255, 255, 255, 0.025);
-      border-radius: 14px;
+      border-radius: 12px;
     }
 
     .modal-actions {
       display: flex;
       justify-content: flex-end;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
-      margin-top: 18px;
+      margin-top: 14px;
     }
 
     .footer {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 38px 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 14px 16px 18px;
       color: rgba(100, 116, 139, 0.9);
-      font-size: 12px;
+      font-size: 10px;
     }
 
-    @media (max-width: 1080px) {
-      .journal-layout {
+    @media (max-width: 1200px) {
+      .top-dashboard {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-compact {
+        grid-column: 1 / -1;
+        min-height: auto;
+      }
+
+      .bottom-dashboard {
         grid-template-columns: 1fr;
       }
 
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stat:nth-child(2) {
-        border-right: 0;
-      }
-
-      .chart-area {
-        height: 320px;
+      .calendar-panel,
+      .performance-panel {
+        min-height: auto;
       }
     }
 
@@ -1006,29 +1093,23 @@
       }
 
       .nav-inner {
-        padding: 15px 16px;
+        padding: 10px 12px;
       }
 
-      .nav-actions {
+      .header-mini {
         display: none;
       }
 
       .page {
-        padding: 34px 14px 60px;
+        padding: 12px;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 28px 0 34px;
+      .top-dashboard {
+        grid-template-columns: 1fr;
       }
 
-      .hero h1 {
-        font-size: clamp(44px, 16vw, 72px);
-      }
-
-      .hero p {
-        font-size: 14px;
-        line-height: 1.75;
+      .hero-compact h1 {
+        font-size: 42px;
       }
 
       .month-bar {
@@ -1038,62 +1119,52 @@
       .month-title {
         grid-column: 1 / -1;
         order: -1;
-        padding: 8px 0;
+        padding: 4px 0;
       }
 
       .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .stat {
-        border-right: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        min-height: 68px;
       }
 
-      .stat:last-child {
-        border-bottom: 0;
+      .stat strong {
+        font-size: 21px;
       }
 
       .panel-head {
-        padding: 20px 18px 16px;
-      }
-
-      .calendar-grid,
-      .weekdays {
-        grid-template-columns: repeat(7, minmax(0, 1fr));
+        padding: 12px;
       }
 
       .weekdays div {
-        font-size: 9px;
-        padding: 10px 3px;
+        font-size: 8px;
+        padding: 8px 2px;
       }
 
       .day {
-        min-height: 84px;
-        padding: 7px;
+        min-height: 58px;
+        padding: 5px;
       }
 
       .day-number {
-        width: 25px;
-        height: 25px;
-        font-size: 11px;
+        width: 21px;
+        height: 21px;
+        font-size: 9px;
       }
 
       .day-value {
-        font-size: 10px;
-        padding: 6px 3px;
-      }
-
-      .note-dot {
-        width: 6px;
-        height: 6px;
-        top: 9px;
-        right: 9px;
+        font-size: 8px;
+        padding: 5px 2px;
       }
 
       .chart-area {
         height: 280px;
-        padding: 12px;
+      }
+
+      .chart-strategy-area {
+        height: 170px;
       }
 
       .strategy-input {
@@ -1105,7 +1176,7 @@
       }
 
       .modal {
-        padding: 20px;
+        padding: 18px;
       }
 
       .modal-actions .btn {
@@ -1115,20 +1186,24 @@
 
     @media (max-width: 420px) {
       .brand {
-        font-size: 17px;
+        font-size: 16px;
       }
 
       .brand-icon {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
       }
 
       .day {
-        min-height: 76px;
+        min-height: 54px;
       }
 
       .day-value {
-        font-size: 9px;
+        font-size: 8px;
       }
     }
   </style>
@@ -1151,35 +1226,37 @@
         BLUE JOURNAL<span>.</span>
       </a>
 
-      <div class="nav-actions">
-        <a class="nav-pill" href="#calendarSection">Calendar</a>
-        <a class="nav-pill" href="#chartSection">Chart</a>
+      <div class="header-mini">
+        <span class="mini-badge">
+          <span class="status-dot"></span>
+          Trading journal active
+        </span>
+
         <a class="nav-pill" href="#notesSection">Notes</a>
         <a class="nav-pill" href="#strategySection">Checklist</a>
+        <a class="nav-pill" href="#candleStrategySection">Strategy Chart</a>
+        <a class="nav-pill" href="#calendarSection">Calendar</a>
       </div>
     </div>
   </header>
 
   <main class="page">
-    <section class="hero">
-      <div>
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          Trading journal active
+    <section class="top-dashboard">
+      <div class="hero-compact glass-panel glow-hover">
+        <div>
+          <h1>
+            TRADE <span class="text-gradient">JOURNAL</span>
+          </h1>
+
+          <p>
+            Compact trading dashboard for daily P/L, notes, checklist, and a simple pro-style setup reminder.
+          </p>
         </div>
 
-        <h1>
-          TRADE <span class="text-gradient neon-blue">JOURNAL</span>
-        </h1>
-
-        <p>
-          Track your daily profit and loss, review your monthly performance, write notes, and keep your strategy checklist clean.
-        </p>
-
-        <div class="month-bar glass-panel">
+        <div class="month-bar">
           <button class="btn btn-dark glow-hover" id="prevMonthBtn">
             <i data-lucide="chevron-left"></i>
-            Previous
+            Prev
           </button>
 
           <div class="month-title" id="monthTitle">Month Year</div>
@@ -1190,37 +1267,90 @@
           </button>
         </div>
       </div>
+
+      <section class="panel glass-panel glow-hover" id="strategySection">
+        <div class="panel-head">
+          <div>
+            <div class="eyebrow">Trade Rules</div>
+            <h2>Checklist</h2>
+            <p>Check this before entering. No setup, no trade.</p>
+          </div>
+        </div>
+
+        <div class="strategy-area">
+          <div class="strategy-input">
+            <input type="text" id="strategyInput" placeholder="Example: Sweep + BOS + pullback entry" />
+            <button class="btn btn-primary glow-hover" id="addStrategyBtn">
+              <i data-lucide="plus"></i>
+              Add
+            </button>
+          </div>
+
+          <div class="strategy-list" id="strategyList"></div>
+        </div>
+      </section>
+
+      <section class="panel glass-panel glow-hover" id="notesSection">
+        <div class="panel-head">
+          <div>
+            <div class="eyebrow">Quick Notes</div>
+            <h2>Notes</h2>
+            <p>Write mistakes, reminders, and what to avoid today.</p>
+          </div>
+        </div>
+
+        <div class="notes-area">
+          <textarea class="note-box" id="notesBox" placeholder="Example:
+Wait for confirmation.
+Do not enter on emotion.
+Max 2 losses then stop."></textarea>
+
+          <div class="panel-actions">
+            <button class="btn btn-primary glow-hover" id="saveNotesBtn">
+              <i data-lucide="save"></i>
+              Save Notes
+            </button>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section class="stats-grid">
-      <div class="stat">
+      <div class="stat glass-panel glow-hover">
         <strong id="totalDays">0</strong>
         <span>Days Traded</span>
       </div>
 
-      <div class="stat green">
+      <div class="stat green glass-panel glow-hover">
         <strong id="totalWon">$0.00</strong>
         <span>Total Won</span>
       </div>
 
-      <div class="stat red">
+      <div class="stat red glass-panel glow-hover">
         <strong id="totalLost">$0.00</strong>
         <span>Total Lost</span>
       </div>
 
-      <div class="stat">
+      <div class="stat glass-panel glow-hover">
         <strong id="monthlyNet">$0.00</strong>
         <span>Monthly Net</span>
       </div>
     </section>
 
-    <div class="journal-layout">
-      <section class="panel glass-panel glow-hover" id="calendarSection">
+    <section class="bottom-dashboard">
+      <section class="panel glass-panel glow-hover calendar-panel" id="calendarSection">
         <div class="panel-head">
           <div>
             <div class="eyebrow">Calendar Tracker</div>
             <h2>Daily Results</h2>
-            <p>Click a date to add how much you won or lost that day.</p>
+            <p>Click a date to add win/loss amount and a quick note.</p>
+          </div>
+
+          <div class="calendar-head-tools">
+            <span class="pro-tip">
+              <i data-lucide="mouse-pointer-click"></i>
+              Click any day
+            </span>
           </div>
         </div>
 
@@ -1240,12 +1370,58 @@
       </section>
 
       <aside>
-        <section class="panel glass-panel glow-hover" id="chartSection">
+        <section class="panel glass-panel glow-hover performance-panel" id="candleStrategySection">
+          <div class="panel-head">
+            <div>
+              <div class="eyebrow">Pro Setup Map</div>
+              <h2>Candle Strategy</h2>
+              <p>Liquidity sweep, BOS, pullback entry, SL below sweep, TP at clean liquidity.</p>
+            </div>
+          </div>
+
+          <div class="chart-strategy-area">
+            <div class="chart-box">
+              <canvas id="strategyCandleChart"></canvas>
+            </div>
+          </div>
+
+          <div class="legend-stack">
+            <div class="legend-item">
+              <span class="legend-icon">
+                <i data-lucide="waves"></i>
+              </span>
+              <div>
+                <strong>1. Sweep first</strong>
+                <span>Price takes previous low/high first. This traps early traders.</span>
+              </div>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-icon">
+                <i data-lucide="trending-up"></i>
+              </span>
+              <div>
+                <strong>2. Wait for BOS</strong>
+                <span>Only look for entry after market structure confirms direction.</span>
+              </div>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-icon">
+                <i data-lucide="target"></i>
+              </span>
+              <div>
+                <strong>3. Pullback entry</strong>
+                <span>Enter near fair value/pullback area. SL beyond sweep. TP at liquidity.</span>
+              </div>
+            </div>
+          </div>
+
           <div class="panel-head">
             <div>
               <div class="eyebrow">Monthly Data</div>
               <h2>Performance</h2>
-              <p>Daily profit and loss for the selected month.</p>
+              <p>Daily profit/loss bars for this month.</p>
             </div>
           </div>
 
@@ -1255,54 +1431,8 @@
             </div>
           </div>
         </section>
-
-        <section class="panel glass-panel glow-hover" id="notesSection">
-          <div class="panel-head">
-            <div>
-              <div class="eyebrow">Quick Notes</div>
-              <h2>Notes</h2>
-              <p>Write your trading thoughts, reminders, or mistakes here.</p>
-            </div>
-          </div>
-
-          <div class="notes-area">
-            <textarea class="note-box" id="notesBox" placeholder="Example:
-I entered too early today.
-Wait for confirmation next time.
-Do not revenge trade after a loss."></textarea>
-
-            <div class="panel-actions">
-              <button class="btn btn-primary glow-hover" id="saveNotesBtn">
-                <i data-lucide="save"></i>
-                Save Notes
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel glass-panel glow-hover" id="strategySection">
-          <div class="panel-head">
-            <div>
-              <div class="eyebrow">Rules</div>
-              <h2>Strategy Checklist</h2>
-              <p>Add your trading rules and check them off.</p>
-            </div>
-          </div>
-
-          <div class="strategy-area">
-            <div class="strategy-input">
-              <input type="text" id="strategyInput" placeholder="Example: Wait for liquidity sweep" />
-              <button class="btn btn-primary glow-hover" id="addStrategyBtn">
-                <i data-lucide="plus"></i>
-                Add
-              </button>
-            </div>
-
-            <div class="strategy-list" id="strategyList"></div>
-          </div>
-        </section>
       </aside>
-    </div>
+    </section>
   </main>
 
   <div class="modal-overlay" id="dayModal">
@@ -1345,7 +1475,7 @@ Do not revenge trade after a loss."></textarea>
   </div>
 
   <footer class="footer">
-    <div>© 2026 Blue Trading Journal. Designed in the void.</div>
+    <div>© 2026 Blue Trading Journal. Trade the setup, not the feeling.</div>
   </footer>
 
   <script>
@@ -1359,6 +1489,32 @@ Do not revenge trade after a loss."></textarea>
     let journalData = JSON.parse(localStorage.getItem(JOURNAL_KEY)) || {};
     let strategyData = JSON.parse(localStorage.getItem(STRATEGY_KEY)) || [];
 
+    if (strategyData.length === 0) {
+      strategyData = [
+        {
+          id: makeId(),
+          text: "Liquidity sweep happened before entry",
+          done: false
+        },
+        {
+          id: makeId(),
+          text: "BOS confirmed direction",
+          done: false
+        },
+        {
+          id: makeId(),
+          text: "Entry is on pullback, not FOMO candle",
+          done: false
+        },
+        {
+          id: makeId(),
+          text: "SL is beyond sweep, TP is realistic",
+          done: false
+        }
+      ];
+      localStorage.setItem(STRATEGY_KEY, JSON.stringify(strategyData));
+    }
+
     const calendarGrid = document.getElementById("calendarGrid");
     const monthTitle = document.getElementById("monthTitle");
 
@@ -1368,6 +1524,7 @@ Do not revenge trade after a loss."></textarea>
     const monthlyNet = document.getElementById("monthlyNet");
 
     const monthlyChart = document.getElementById("monthlyChart");
+    const strategyCandleChart = document.getElementById("strategyCandleChart");
 
     const dayModal = document.getElementById("dayModal");
     const modalTitle = document.getElementById("modalTitle");
@@ -1405,6 +1562,14 @@ Do not revenge trade after a loss."></textarea>
         closeModal();
       }
     });
+
+    function makeId() {
+      if (window.crypto && crypto.randomUUID) {
+        return crypto.randomUUID();
+      }
+
+      return "id-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+    }
 
     function saveJournal() {
       localStorage.setItem(JOURNAL_KEY, JSON.stringify(journalData));
@@ -1512,7 +1677,7 @@ Do not revenge trade after a loss."></textarea>
             amountBox.classList.add("flat");
           }
 
-          amountBox.textContent = formatMoney(amount);
+          amountBox.textContent = formatShortMoney(amount);
           dayCell.appendChild(amountBox);
         }
 
@@ -1601,10 +1766,10 @@ Do not revenge trade after a loss."></textarea>
       }
 
       const padding = {
-        top: 34,
-        right: 18,
-        bottom: 42,
-        left: 58
+        top: 28,
+        right: 14,
+        bottom: 34,
+        left: 48
       };
 
       const chartWidth = width - padding.left - padding.right;
@@ -1639,7 +1804,7 @@ Do not revenge trade after a loss."></textarea>
       ctx.stroke();
 
       ctx.fillStyle = "rgba(148, 163, 184, 0.9)";
-      ctx.font = "12px Inter";
+      ctx.font = "10px Inter";
       ctx.textAlign = "right";
       ctx.textBaseline = "middle";
 
@@ -1653,11 +1818,11 @@ Do not revenge trade after a loss."></textarea>
 
       labelValues.forEach(function(value, index) {
         const y = padding.top + (chartHeight / 4) * index;
-        ctx.fillText(formatShortMoney(value), padding.left - 8, y);
+        ctx.fillText(formatShortMoney(value), padding.left - 7, y);
       });
 
-      const barGap = 3;
-      const barWidth = Math.max(4, chartWidth / daysInMonth - barGap);
+      const barGap = 2;
+      const barWidth = Math.max(3, chartWidth / daysInMonth - barGap);
 
       values.forEach(function(value, index) {
         const x = padding.left + index * (chartWidth / daysInMonth) + barGap / 2;
@@ -1673,25 +1838,25 @@ Do not revenge trade after a loss."></textarea>
         if (value > 0) {
           ctx.fillStyle = "#4ade80";
           ctx.shadowColor = "rgba(74, 222, 128, 0.4)";
-          ctx.shadowBlur = 10;
+          ctx.shadowBlur = 8;
         } else if (value < 0) {
           ctx.fillStyle = "#fb7185";
           ctx.shadowColor = "rgba(251, 113, 133, 0.4)";
-          ctx.shadowBlur = 10;
+          ctx.shadowBlur = 8;
         } else {
-          ctx.fillStyle = "rgba(148, 163, 184, 0.45)";
+          ctx.fillStyle = "rgba(148, 163, 184, 0.35)";
           ctx.shadowBlur = 0;
           barTop = zeroY - 1;
           barHeight = 2;
         }
 
-        roundRect(ctx, x, barTop, barWidth, barHeight, 5);
+        roundRect(ctx, x, barTop, barWidth, barHeight, 4);
         ctx.fill();
         ctx.shadowBlur = 0;
       });
 
       ctx.fillStyle = "rgba(148, 163, 184, 0.85)";
-      ctx.font = "11px Inter";
+      ctx.font = "10px Inter";
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
 
@@ -1706,15 +1871,204 @@ Do not revenge trade after a loss."></textarea>
           day === daysInMonth
         ) {
           const x = padding.left + (day - 1) * (chartWidth / daysInMonth) + barWidth / 2;
-          ctx.fillText(day, x, height - padding.bottom + 16);
+          ctx.fillText(day, x, height - padding.bottom + 13);
         }
       }
 
       ctx.fillStyle = "#ffffff";
-      ctx.font = "700 13px Inter";
+      ctx.font = "800 11px Inter";
       ctx.textAlign = "left";
       ctx.textBaseline = "alphabetic";
       ctx.fillText("Daily Profit / Loss", padding.left, 18);
+    }
+
+    function renderStrategyCandleChart() {
+      const canvas = strategyCandleChart;
+      const ctx = canvas.getContext("2d");
+
+      const ratio = window.devicePixelRatio || 1;
+      const width = canvas.parentElement.clientWidth;
+      const height = canvas.parentElement.clientHeight;
+
+      canvas.width = width * ratio;
+      canvas.height = height * ratio;
+
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.clearRect(0, 0, width, height);
+
+      const candles = [
+        { o: 64, h: 70, l: 58, c: 60 },
+        { o: 60, h: 62, l: 52, c: 54 },
+        { o: 54, h: 57, l: 48, c: 50 },
+        { o: 50, h: 53, l: 43, c: 45 },
+        { o: 45, h: 49, l: 38, c: 41 },
+        { o: 41, h: 46, l: 31, c: 44 },
+        { o: 44, h: 58, l: 42, c: 56 },
+        { o: 56, h: 66, l: 53, c: 64 },
+        { o: 64, h: 75, l: 62, c: 72 },
+        { o: 72, h: 77, l: 63, c: 66 },
+        { o: 66, h: 70, l: 59, c: 62 },
+        { o: 62, h: 70, l: 61, c: 68 },
+        { o: 68, h: 82, l: 66, c: 79 },
+        { o: 79, h: 88, l: 76, c: 86 }
+      ];
+
+      const minPrice = 28;
+      const maxPrice = 92;
+
+      const padding = {
+        top: 14,
+        right: 14,
+        bottom: 18,
+        left: 14
+      };
+
+      const chartWidth = width - padding.left - padding.right;
+      const chartHeight = height - padding.top - padding.bottom;
+
+      function y(price) {
+        return padding.top + ((maxPrice - price) / (maxPrice - minPrice)) * chartHeight;
+      }
+
+      function x(index) {
+        return padding.left + index * (chartWidth / (candles.length - 1));
+      }
+
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.055)";
+      ctx.lineWidth = 1;
+
+      for (let i = 0; i <= 3; i++) {
+        const gy = padding.top + (chartHeight / 3) * i;
+        ctx.beginPath();
+        ctx.moveTo(padding.left, gy);
+        ctx.lineTo(width - padding.right, gy);
+        ctx.stroke();
+      }
+
+      drawZone(y(61), y(70), "rgba(34, 211, 238, 0.08)", "PULLBACK ENTRY ZONE");
+      drawLine(y(38), "rgba(251, 113, 133, 0.62)", "SWEEP / SL");
+      drawLine(y(82), "rgba(74, 222, 128, 0.62)", "TP AREA");
+      drawLine(y(72), "rgba(255, 255, 255, 0.28)", "BOS");
+
+      candles.forEach(function(candle, index) {
+        const cx = x(index);
+        const candleWidth = Math.max(5, chartWidth / candles.length * 0.42);
+        const isBull = candle.c >= candle.o;
+        const color = isBull ? "#4ade80" : "#fb7185";
+
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 1.4;
+
+        ctx.beginPath();
+        ctx.moveTo(cx, y(candle.h));
+        ctx.lineTo(cx, y(candle.l));
+        ctx.stroke();
+
+        const bodyTop = y(Math.max(candle.o, candle.c));
+        const bodyBottom = y(Math.min(candle.o, candle.c));
+        const bodyHeight = Math.max(4, bodyBottom - bodyTop);
+
+        ctx.fillStyle = color;
+        ctx.shadowColor = isBull ? "rgba(74, 222, 128, 0.28)" : "rgba(251, 113, 133, 0.28)";
+        ctx.shadowBlur = 7;
+
+        roundRect(ctx, cx - candleWidth / 2, bodyTop, candleWidth, bodyHeight, 3);
+        ctx.fill();
+
+        ctx.shadowBlur = 0;
+      });
+
+      drawArrow(x(5), y(33), x(5), y(39), "#fb7185");
+      drawTag("LIQUIDITY SWEEP", x(3.45), y(31), "#fb7185");
+
+      drawArrow(x(8), y(74), x(8.9), y(72), "#22d3ee");
+      drawTag("BOS", x(8.25), y(85), "#22d3ee");
+
+      drawArrow(x(10.5), y(58), x(11), y(64), "#ffffff");
+      drawTag("ENTRY", x(9.45), y(57), "#ffffff");
+
+      drawArrow(x(13), y(84), x(12.35), y(79), "#4ade80");
+      drawTag("TAKE PROFIT", x(10.9), y(91), "#4ade80");
+
+      function drawZone(y1, y2, fill, label) {
+        const top = Math.min(y1, y2);
+        const zoneHeight = Math.abs(y2 - y1);
+
+        ctx.fillStyle = fill;
+        ctx.fillRect(padding.left, top, chartWidth, zoneHeight);
+
+        ctx.fillStyle = "rgba(191, 248, 255, 0.9)";
+        ctx.font = "800 8px Inter";
+        ctx.textAlign = "left";
+        ctx.textBaseline = "middle";
+        ctx.fillText(label, padding.left + 7, top + zoneHeight / 2);
+      }
+
+      function drawLine(lineY, color, label) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 1;
+        ctx.setLineDash([5, 5]);
+
+        ctx.beginPath();
+        ctx.moveTo(padding.left, lineY);
+        ctx.lineTo(width - padding.right, lineY);
+        ctx.stroke();
+
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = color;
+        ctx.font = "800 8px Inter";
+        ctx.textAlign = "right";
+        ctx.textBaseline = "bottom";
+        ctx.fillText(label, width - padding.right - 4, lineY - 3);
+      }
+
+      function drawTag(text, tagX, tagY, color) {
+        ctx.font = "900 8px Inter";
+        const metrics = ctx.measureText(text);
+        const tagWidth = metrics.width + 12;
+        const tagHeight = 17;
+
+        ctx.fillStyle = "rgba(0, 0, 0, 0.58)";
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 1;
+
+        roundRect(ctx, tagX, tagY - tagHeight / 2, tagWidth, tagHeight, 8);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = color;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(text, tagX + tagWidth / 2, tagY);
+      }
+
+      function drawArrow(fromX, fromY, toX, toY, color) {
+        const angle = Math.atan2(toY - fromY, toX - fromX);
+        const size = 6;
+
+        ctx.strokeStyle = color;
+        ctx.fillStyle = color;
+        ctx.lineWidth = 1.6;
+
+        ctx.beginPath();
+        ctx.moveTo(fromX, fromY);
+        ctx.lineTo(toX, toY);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(toX, toY);
+        ctx.lineTo(
+          toX - size * Math.cos(angle - Math.PI / 6),
+          toY - size * Math.sin(angle - Math.PI / 6)
+        );
+        ctx.lineTo(
+          toX - size * Math.cos(angle + Math.PI / 6),
+          toY - size * Math.sin(angle + Math.PI / 6)
+        );
+        ctx.closePath();
+        ctx.fill();
+      }
     }
 
     function roundRect(ctx, x, y, width, height, radius) {
@@ -1807,7 +2161,7 @@ Do not revenge trade after a loss."></textarea>
       if (!text) return;
 
       strategyData.push({
-        id: crypto.randomUUID(),
+        id: makeId(),
         text: text,
         done: false
       });
@@ -1850,7 +2204,7 @@ Do not revenge trade after a loss."></textarea>
       if (strategyData.length === 0) {
         strategyList.innerHTML = `
           <div class="empty-state">
-            No strategy checklist yet. Add your first trading rule.
+            No checklist yet. Add your first trading rule.
           </div>
         `;
         return;
@@ -1865,7 +2219,7 @@ Do not revenge trade after a loss."></textarea>
               onchange="toggleStrategy('${item.id}')"
             />
             <div class="strategy-text">${escapeHTML(item.text)}</div>
-            <button class="delete-strategy" onclick="deleteStrategy('${item.id}')">×</button>
+            <button class="delete-strategy" onclick="deleteStrategy('${item.id}')" aria-label="Delete strategy">×</button>
           </div>
         `;
       }).join("");
@@ -1884,13 +2238,18 @@ Do not revenge trade after a loss."></textarea>
       renderCalendar();
       renderStats();
       renderChart();
+      renderStrategyCandleChart();
       attachCursorHoverEvents();
+
       if (window.lucide) {
         lucide.createIcons();
       }
     }
 
-    window.addEventListener("resize", renderChart);
+    window.addEventListener("resize", function() {
+      renderChart();
+      renderStrategyCandleChart();
+    });
 
     loadNotes();
     renderStrategies();
@@ -1932,11 +2291,15 @@ Do not revenge trade after a loss."></textarea>
         item.dataset.cursorReady = "true";
 
         item.addEventListener("mouseenter", function() {
-          cursor.style.transform = "translate(-50%, -50%) scale(2.5)";
+          if (!cursor) return;
+
+          cursor.style.transform = "translate(-50%, -50%) scale(2.35)";
           cursor.style.backgroundColor = "rgba(34, 211, 238, 0.1)";
         });
 
         item.addEventListener("mouseleave", function() {
+          if (!cursor) return;
+
           cursor.style.transform = "translate(-50%, -50%) scale(1)";
           cursor.style.backgroundColor = "transparent";
         });
